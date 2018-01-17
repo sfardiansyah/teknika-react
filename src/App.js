@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { Route } from "react-router-dom";
 import HomePage from "./Components/Pages/HomePage";
 import LoginPage from "./Components/Pages/LoginPage";
+import SignupPage from "./Components/Pages/SignupPage";
 import DashboardPage from "./Components/Pages/DashboardPage";
 import UserRoute from "./Components/Routes/UserRoute";
 import GuestRoute from "./Components/Routes/GuestRoute";
@@ -21,6 +22,12 @@ const App = ({ location }) => (
             path="/login"
             exact
             component={LoginPage}
+        />
+        <GuestRoute
+            location={location}
+            path="/signup"
+            exact
+            component={SignupPage}
         />
     </div>
 );
